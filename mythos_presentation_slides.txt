@@ -7,7 +7,7 @@ SLIDE 1: PROJECT OVERVIEW - NLP-DRIVEN RISK ASSESSMENT
 * Goal: Quantify the real-world danger of Anthropic’s "Mythos" model using empirical data.
 * Beyond Subjective Sentiment: Shifting from "How people feel" to "What experts predict."
 * Core Focus: Programmatically identifying specific victims and technical harm vectors.
-* Dataset: 429 expert-level discussions and post records scraped from Hacker News & Cybersecurity forums (2009 - May 2026).
+* Dataset: 369 expert-level discussions and post records scraped from Hacker News & Cybersecurity forums (April 2021 - May 2026).
 
 ==================================================
 SLIDE 2: METHODOLOGY - THE "THREAT EXTRACTION" PIPELINE
@@ -20,51 +20,51 @@ SLIDE 2: METHODOLOGY - THE "THREAT EXTRACTION" PIPELINE
 ==================================================
 SLIDE 3: RESULTS (1) - OVERVIEW: THE WAR OF REALITIES
 ==================================================
-* Polarization Discovered: The 429-post dataset is sharply split—50.1% Positive vs. 28.7% Negative.
+* Polarization Discovered: The 369-post dataset is sharply split—49.6% Positive vs. 28.7% Negative.
 * The Defensive View (Positive): High optimism surrounding the Mozilla Firefox audit (271 vulnerabilities autonomously fixed by Mythos).
-* The Offensive Reality (Negative): Sharp anxiety following the April 2026 "Discord Sleuths" leak and reports of $12M cybercriminal thefts.
+* The Offensive Reality (Negative): Sharp anxiety following the April 2026 "Discord Sleuths" leak and reports of cybercriminal thefts.
 * Conclusion: The technical community views Mythos as a neutral but highly potent "Force Multiplier" for both sides.
 
 ==================================================
 SLIDE 4: RESULTS (2) - VICTIMOLOGY: VOLUME VS. VULNERABILITY
 ==================================================
-* Individual Users: Represent the highest volume (368 mentions, 85.7% of data) but maintain a moderate positive sentiment (+0.19).
-* Financial Institutions: The #1 Critical Outlier. Only 2.1% of mentions (9 total), but the ONLY category to register a Negative average sentiment score (-0.08).
-* Systemic Targets: Critical Infrastructure (24 mentions, +0.11 score) and Government systems (15 mentions, +0.17 score) reflect heavy technical skepticism and high-stakes concern.
-* The Defensive Buffer: Healthcare (+0.87 score) and SMEs (+0.35 score) are highly positive, viewed as potential beneficiaries of automated AI defense.
+* Individual Users: Represent the highest volume (310 mentions, 84.0% of data) but maintain a moderate positive sentiment (+0.20).
+* Financial Institutions: The #1 Critical Outlier. Only 2.4% of mentions (9 total), but the ONLY category to register a Negative average sentiment score (-0.09).
+* Systemic Targets: Critical Infrastructure (24 mentions, +0.11 score) and Government systems (14 mentions, +0.12 score) reflect heavy technical skepticism and high-stakes concern.
+* The Defensive Buffer: Healthcare (+0.87 score) and SMEs (+0.30 score) are highly positive, viewed as potential beneficiaries of automated AI defense.
 
 [Data Table: Victim Risk Distribution]
 Victim Category          | Mentions | Avg Sentiment
 -------------------------|----------|---------------
-Financial Institutions   | 9        | -0.08
+Financial Institutions   | 9        | -0.09
 Critical Infrastructure  | 24       | +0.11
-Government Systems       | 15       | +0.17
-Individual Users         | 368      | +0.19
-SMEs                     | 10       | +0.35
+Government Systems       | 14       | +0.12
+Individual Users         | 310      | +0.20
+SMEs                     | 9        | +0.30
 Healthcare               | 3        | +0.87
 
 ==================================================
 SLIDE 5: RESULTS (3) - HARM ANALYSIS: SABOTAGE OVER BREACHES
 ==================================================
-* Major Shift in Threat Models: 75.5% of all extracted harms (324 of 429 mentions) identify "Autonomous Sabotage" as the primary threat.
-* The Escalation Gap: "Zero-Day Exploitation" (74 mentions, 17.2%) has a lower sentiment score (+0.17) than "Data Breaches" (26 mentions, 6.1%, score +0.23).
-* Expert Verdict: The community is minimally concerned with stolen data (only 6.1%) and heavily alarmed by AI autonomously breaking functional systems.
+* Major Shift in Threat Models: 74.3% of all extracted harms (274 of 369 mentions) identify "Autonomous Sabotage" as the primary threat.
+* The Escalation Gap: "Zero-Day Exploitation" (65 mentions, 17.6%) has a lower sentiment score (+0.17) than "Data Breaches" (26 mentions, 7.0%, score +0.23).
+* Expert Verdict: The community is heavily alarmed by AI autonomously breaking functional systems, and shows specific anxiety around financial fraud (-0.13 sentiment).
 
 [Data Table: Predicted Harm Prevalence]
 Harm Category            | Count | % of Data | Sentiment
 -------------------------|-------|-----------|----------
-Autonomous Sabotage      | 324   | 75.5%     | 0.18
-Zero-Day Exploitation    | 74    | 17.2%     | 0.17
-Data Breach              | 26    | 6.1%      | 0.23
-Financial Fraud          | 4     | 0.9%      | 0.14
-Ransomware               | 1     | 0.2%      | 0.45
+Autonomous Sabotage      | 274   | 74.3%     | +0.20
+Zero-Day Exploitation    | 65    | 17.6%     | +0.17
+Data Breach              | 26    | 7.0%      | +0.23
+Financial Fraud          | 3     | 0.8%      | -0.13
+Ransomware               | 1     | 0.3%      | +0.45
 
 ==================================================
 SLIDE 6: RESULTS (4) - TEMPORAL TRENDS: THE 2026 CRISIS
 ==================================================
-* Baseline: Historic stability and high safety optimism (averaging near +0.98 during 2021-2023).
+* Baseline: Historic stability and high safety optimism during early 2021-2023.
 * The Explosion: Volatility began in late 2025 as the first agentic capabilities leaked online.
-* Zero Hour (April 2026): Saw extreme sentiment crashes (dropping to -0.025 on April 26) following model weight exposure to Discord groups.
+* Zero Hour (April 2026): Saw extreme sentiment crashes following model weight exposure to Discord groups.
 * Current Outlook: Highly volatile. High optimism for automated patches (+0.98 spikes) is constantly countered by the fear of decentralized criminal misuse.
 
 ==================================================
