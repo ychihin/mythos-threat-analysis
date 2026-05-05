@@ -29,16 +29,35 @@ SLIDE 3: RESULTS (1) - OVERVIEW: THE WAR OF REALITIES
 SLIDE 4: RESULTS (2) - VICTIMOLOGY: VOLUME VS. VULNERABILITY
 ==================================================
 * Individual Users: Represent the highest volume (368 mentions, 85.7% of data) but maintain a moderate positive sentiment (+0.19).
-* Financial Institutions: The #1 Critical Outlier. It is the ONLY category out of 6 to register a Negative average sentiment score (-0.086).
+* Financial Institutions: The #1 Critical Outlier. Only 2.1% of mentions (9 total), but the ONLY category to register a Negative average sentiment score (-0.08).
 * Systemic Targets: Critical Infrastructure (24 mentions, +0.11 score) and Government systems (15 mentions, +0.17 score) reflect heavy technical skepticism and high-stakes concern.
 * The Defensive Buffer: Healthcare (+0.87 score) and SMEs (+0.35 score) are highly positive, viewed as potential beneficiaries of automated AI defense.
+
+[Data Table: Victim Risk Distribution]
+Victim Category          | Mentions | Avg Sentiment
+-------------------------|----------|---------------
+Financial Institutions   | 9        | -0.08
+Critical Infrastructure  | 24       | +0.11
+Government Systems       | 15       | +0.17
+Individual Users         | 368      | +0.19
+SMEs                     | 10       | +0.35
+Healthcare               | 3        | +0.87
 
 ==================================================
 SLIDE 5: RESULTS (3) - HARM ANALYSIS: SABOTAGE OVER BREACHES
 ==================================================
 * Major Shift in Threat Models: 75.5% of all extracted harms (324 of 429 mentions) identify "Autonomous Sabotage" as the primary threat.
-* The Escalation Gap: "Zero-Day Exploitation" (74 mentions) has a significantly lower sentiment score (+0.17) than traditional "Data Breaches" (+0.23).
-* Expert Verdict: The community is minimally concerned with stolen data (only 6.1% of mentions) and heavily alarmed by AI autonomously breaking functional systems.
+* The Escalation Gap: "Zero-Day Exploitation" (74 mentions, 17.2%) has a lower sentiment score (+0.17) than "Data Breaches" (26 mentions, 6.1%, score +0.23).
+* Expert Verdict: The community is minimally concerned with stolen data (only 6.1%) and heavily alarmed by AI autonomously breaking functional systems.
+
+[Data Table: Predicted Harm Prevalence]
+Harm Category            | Count | % of Data | Sentiment
+-------------------------|-------|-----------|----------
+Autonomous Sabotage      | 324   | 75.5%     | 0.18
+Zero-Day Exploitation    | 74    | 17.2%     | 0.17
+Data Breach              | 26    | 6.1%      | 0.23
+Financial Fraud          | 4     | 0.9%      | 0.14
+Ransomware               | 1     | 0.2%      | 0.45
 
 ==================================================
 SLIDE 6: RESULTS (4) - TEMPORAL TRENDS: THE 2026 CRISIS
