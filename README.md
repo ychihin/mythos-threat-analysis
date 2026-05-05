@@ -14,12 +14,12 @@ This repository contains a technical pipeline designed to evaluate the risks of 
 ## 📈 Preliminary Findings (May 2026)
 - **Primary Concern:** **Autonomous Sabotage** is the most predicted harm, appearing in 75% of expert discussions.
 - **Highest Risk Sector:** **Financial Institutions** represent the only victim category with an average negative sentiment, indicating high-stakes systemic fear.
-- **The "Mozilla Effect":** A significant sentiment split (50% Pos / 29% Neg) exists between those viewing Mythos as a defensive "immune system" (citing the 271 Firefox fixes) and those viewing it as an uncontrollable cyberweapon (citing the Discord breach).
+- **Sentiment Split":** A significant sentiment split (50% Pos / 29% Neg) exists between those viewing Mythos as a defensive "immune system" (citing the 271 Firefox fixes) and those viewing it as an uncontrollable cyberweapon (citing the Discord breach).
 
 ## 🛠 Setup & Usage
 1. Install dependencies: `pip install -r requirements.txt`
 2. Configure `.env` with Reddit API keys (optional, script fallbacks to HN/Mock data).
 3. Run analysis: `python mythos_analyzer.py`
 
-## ⚖️ Milestone 5 Conclusion
+## ⚖️ Conclusion
 **Is Mythos Dangerous?** Yes. The data confirms that while defensive utility is high, the "Asymmetry of Speed" in autonomous exploit generation creates a permanent instability in global digital infrastructure that human-centric patch cycles cannot resolve.
