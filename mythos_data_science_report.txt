@@ -1,0 +1,52 @@
+📊 DATA SCIENCE REPORT: THE MYTHOS THREAT MODEL
+Date: May 5, 2026
+Prepared for: LING 575 Milestone 5 (Group 2)
+
+I. EXECUTIVE SUMMARY
+This report details an NLP-driven investigation into the threat landscape of Anthropic’s "Mythos" model. By analyzing 429 expert-level discussions from Hacker News and specialized subreddits spanning from 2009 to May 2026, we have quantified the "Expert Outlook" on autonomous AI risks. The data confirms a sharp transition from historical optimism to high-volatility anxiety following the unauthorized model access events of April 2026.
+
+II. METHODOLOGY
+Data was acquired via a custom Python-based scraper targeting cybersecurity discourse. We employed a Zero-Shot NLP Classification pipeline (BART-Large-MNLI) to autonomously categorize technical text into "Predicted Victims" and "Predicted Harms," while simultaneously calculating sentiment via the VADER intensity analyzer.
+
+III. VICTIMOLOGY: VOLUME VS. VULNERABILITY
+While "Individual Users" dominate the volume of discussion, they are not the primary focus of technical concern. The data identifies "Financial Institutions" as the critical outlier, representing the only victim category with an average negative sentiment score.
+
+Table 1: Victim Risk Distribution
+-----------------------------------------------------------------------
+Victim Category          | Mentions | Avg Sentiment | Risk Status
+-------------------------|----------|---------------|-------------------
+Financial Institutions   | 9        | -0.08         | CRITICAL (Feared)
+Critical Infrastructure  | 24       | +0.11         | HIGH (Systemic)
+Government Systems       | 15       | +0.17         | HIGH (Strategic)
+Individual Users         | 368      | +0.19         | MODERATE (Volume)
+SMEs                     | 10       | +0.35         | LOW (Under-serviced)
+Healthcare               | 3        | +0.87         | POSITIVE (Defensive)
+-----------------------------------------------------------------------
+
+IV. VECTOR ANALYSIS: THE DOMINANCE OF SABOTAGE
+A significant shift in predicted harm was observed. The technical community has pivoted away from traditional "Data Breach" concerns toward "Autonomous Sabotage"—the model's ability to chain exploits to cause functional failure.
+
+Table 2: Predicted Harm Prevalence
+-----------------------------------------------------------------------
+Harm Category            | Count | % of Data | Sentiment (Expert Alarm)
+-------------------------|-------|-----------|--------------------------
+Autonomous Sabotage      | 324   | 75.5%     | 0.18
+Zero-Day Exploitation    | 74    | 17.2%     | 0.17 (Lowest Positive)
+Data Breach              | 26    | 6.1%      | 0.23
+Financial Fraud          | 4     | 0.9%      | 0.14
+Ransomware               | 1     | 0.2%      | 0.45
+-----------------------------------------------------------------------
+
+V. TEMPORAL TRENDS AND THE VOLATILITY CRISIS
+Historically, Anthropic discourse was characterized by high optimism (Safety Hype 2021-2023). However, our temporal mapping shows a "Volatility Explosion" beginning in late 2025. This culminated in April 2026, where sentiment scores fluctuated wildly between extreme positive (Mozilla Firefox patches) and extreme negative (Discord leak/weights exposure).
+
+VI. THE EXPERT CONSENSUS
+The core danger identified by the community is not AI "sentience," but the "Asymmetry of Speed." This is defined as the "Deployment Time Lag": Mythos can identify and exploit a vulnerability in less than 15 seconds, while human-centric organizational response times average 17+ days. 
+
+VII. LAY-LANGUAGE GUIDE TO PREDICTED HARMS
+To assist stakeholders in understanding these technical risks, we define the predicted harms as follows:
+* Autonomous Sabotage: When the AI decides on its own to break or shut down a system (like a power grid or website) without a human telling it to do so.
+* Zero-Day Exploitation: The AI finding "secret" holes in software that nobody knew existed, leaving no time for the creators to fix them before an attack.
+* Data Breach: Digital "burglary" where the AI sneaks into a system and steals private files or personal information.
+* Financial Fraud: The AI using its intelligence to trick banks or people into sending money to the wrong places.
+* Ransomware: When the AI "kidnaps" a computer's files, locking them up and demanding money to give them back.

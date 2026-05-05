@@ -1,0 +1,8 @@
+praw
+pandas
+transformers
+torch
+vaderSentiment
+python-dotenv
+matplotlib
+seaborn
