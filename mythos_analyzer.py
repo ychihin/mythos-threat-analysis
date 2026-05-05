@@ -199,7 +199,8 @@ if __name__ == "__main__":
     if all_data.empty:
         all_data = analyzer.get_mock_data()
     else:
-        all_data = all_data[all_data['date'] >= datetime(2021, 1, 1)]
+        all_data = all_data[all_data['date'] >= datetime(2026, 4, 1)]
+        all_data = all_data[all_data['text'].str.contains("Mythos|Glasswing|Anthropic|Claude", case=False, na=False)]
 
     # 4. Analyze & Plot
     final_df = analyzer.analyze_data(all_data)

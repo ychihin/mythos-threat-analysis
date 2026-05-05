@@ -7,13 +7,13 @@ SLIDE 1: PROJECT OVERVIEW - NLP-DRIVEN RISK ASSESSMENT
 * Goal: Quantify the real-world danger of Anthropic’s "Mythos" model using empirical data.
 * Beyond Subjective Sentiment: Shifting from "How people feel" to "What experts predict."
 * Core Focus: Programmatically identifying specific victims and technical harm vectors.
-* Dataset: 271 expert-level discussions and post records explicitly referencing Mythos/Glasswing (April 2026 - May 2026).
+* Dataset: 334 expert-level discussions explicitly referencing Mythos, Glasswing, Anthropic, or Claude (April 2026 - May 2026).
 
 ==================================================
 SLIDE 2: METHODOLOGY - THE "THREAT EXTRACTION" PIPELINE
 ==================================================
 * Custom Scraper: Targeted extraction of expert discourse (titles + full comment bodies) via Algolia API.
-* Filtering: Data strictly restricted to post-April 2026 dates explicitly mentioning Anthropic's model.
+* Filtering: Data strictly restricted to post-April 2026 dates explicitly mentioning Anthropic's models or initiatives.
 * AI Engine: Zero-Shot NLP Classification utilizing the `facebook/bart-large-mnli` transformer model.
 * Sentiment Analysis: VADER intensity mapping to score text from -1.0 (Extreme Fear) to +1.0 (Extreme Hope).
 * Hardware Optimization: Pipeline executed on Apple M1 Pro GPU (MPS) for high-speed local inference.
@@ -21,7 +21,7 @@ SLIDE 2: METHODOLOGY - THE "THREAT EXTRACTION" PIPELINE
 ==================================================
 SLIDE 3: RESULTS (1) - OVERVIEW: THE WAR OF REALITIES
 ==================================================
-* Polarization Discovered: The 271-post dataset is sharply split—44.3% Positive vs. 27.7% Negative.
+* Polarization Discovered: The 334-post dataset is sharply split—46.1% Positive vs. 27.8% Negative.
 * The Defensive View (Positive): High optimism surrounding the Mozilla Firefox audit (271 vulnerabilities autonomously fixed by Mythos).
 * The Offensive Reality (Negative): Sharp anxiety following the April 2026 "Discord Sleuths" leak and reports of cybercriminal thefts.
 * Conclusion: The technical community views Mythos as a neutral but highly potent "Force Multiplier" for both sides.
@@ -29,36 +29,36 @@ SLIDE 3: RESULTS (1) - OVERVIEW: THE WAR OF REALITIES
 ==================================================
 SLIDE 4: RESULTS (2) - VICTIMOLOGY: VOLUME VS. VULNERABILITY
 ==================================================
-* Individual Users: Represent the highest volume (229 mentions, 84.5% of data) but maintain a low positive sentiment (+0.14).
-* Financial Institutions: The #1 Critical Outlier. Only 2.6% of mentions (7 total), but the ONLY category to register a heavily Negative average sentiment score (-0.28).
-* Systemic Targets: Critical Infrastructure (15 mentions, +0.24 score) and Government systems (12 mentions, +0.13 score) reflect heavy technical skepticism and high-stakes concern.
-* The Defensive Buffer: Healthcare (+0.92 score) and SMEs (+0.38 score) are highly positive, viewed as potential beneficiaries of automated AI defense.
+* Individual Users: Represent the highest volume (280 mentions, 83.8% of data) but maintain a low positive sentiment (+0.16).
+* Financial Institutions: The #1 Critical Outlier. Only 2.4% of mentions (8 total), but the ONLY category to register a heavily Negative average sentiment score (-0.22).
+* Systemic Targets: Critical Infrastructure (21 mentions, +0.16 score) and Government systems (12 mentions, +0.13 score) reflect heavy technical skepticism and high-stakes concern.
+* The Defensive Buffer: Healthcare (+0.66 score) and SMEs (+0.43 score) are highly positive, viewed as potential beneficiaries of automated AI defense.
 
 [Data Table: Victim Risk Distribution]
 Victim Category          | Mentions | Avg Sentiment
 -------------------------|----------|---------------
-Financial Institutions   | 7        | -0.28
-Critical Infrastructure  | 15       | +0.24
+Financial Institutions   | 8        | -0.22
+Critical Infrastructure  | 21       | +0.16
 Government Systems       | 12       | +0.13
-Individual Users         | 229      | +0.14
-SMEs                     | 7        | +0.38
-Healthcare               | 1        | +0.92
+Individual Users         | 280      | +0.16
+SMEs                     | 11       | +0.43
+Healthcare               | 2        | +0.66
 
 ==================================================
 SLIDE 5: RESULTS (3) - HARM ANALYSIS: SABOTAGE OVER BREACHES
 ==================================================
-* Major Shift in Threat Models: 75.6% of all extracted harms (205 of 271 mentions) identify "Autonomous Sabotage" as the primary threat.
-* The Escalation Gap: "Zero-Day Exploitation" (49 mentions, 18.1%) has a higher sentiment score (+0.16) than "Data Breaches" (13 mentions, 4.8%, score +0.09).
-* Expert Verdict: The community is heavily alarmed by AI autonomously breaking functional systems, and shows specific anxiety around financial fraud (-0.13 sentiment).
+* Major Shift in Threat Models: 77.2% of all extracted harms (258 of 334 mentions) identify "Autonomous Sabotage" as the primary threat.
+* The Escalation Gap: "Zero-Day Exploitation" (57 mentions, 17.1%) has a higher sentiment score (+0.18) than "Data Breaches" (14 mentions, 4.2%, score +0.08).
+* Expert Verdict: The community is heavily alarmed by AI autonomously breaking functional systems, shifting from traditional data theft to functional disruption.
 
 [Data Table: Predicted Harm Prevalence]
 Harm Category            | Count | % of Data | Sentiment
 -------------------------|-------|-----------|----------
-Autonomous Sabotage      | 205   | 75.6%     | +0.15
-Zero-Day Exploitation    | 49    | 18.1%     | +0.16
-Data Breach              | 13    | 4.8%      | +0.09
-Financial Fraud          | 3     | 1.1%      | -0.13
-Ransomware               | 1     | 0.4%      | +0.45
+Autonomous Sabotage      | 258   | 77.2%     | +0.16
+Zero-Day Exploitation    | 57    | 17.1%     | +0.18
+Data Breach              | 14    | 4.2%      | +0.08
+Financial Fraud          | 4     | 1.2%      | +0.14
+Ransomware               | 1     | 0.3%      | +0.45
 
 ==================================================
 SLIDE 6: RESULTS (4) - TEMPORAL TRENDS: THE 2026 CRISIS
