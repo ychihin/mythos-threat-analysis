@@ -167,7 +167,8 @@ if __name__ == "__main__":
         "LLM hacking automation",
         "Mythos",
         "Anthropic's Mythos",
-        "Claude Mythos"
+        "Claude Mythos",
+        "Anthropic Claude"
     ]
     
     # 1. Scrape HN
@@ -184,6 +185,8 @@ if __name__ == "__main__":
     all_data = pd.concat([hn_df, reddit_df], ignore_index=True)
     if all_data.empty:
         all_data = analyzer.get_mock_data()
+    else:
+        all_data = all_data[all_data['date'] >= datetime(2021, 1, 1)]
 
     # 4. Analyze & Plot
     final_df = analyzer.analyze_data(all_data)
