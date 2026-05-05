@@ -39,22 +39,35 @@ class MythosAnalyzer:
         return "Neutral (Technical/Objective)"
 
     def plot_temporal_sentiment(self, df):
-        """Generates a line chart showing sentiment change over time."""
+        """Generates a scatter chart showing sentiment change over time with a trendline."""
         if len(df) < 2:
             print("Not enough data points for temporal plotting.")
             return
+
+        import matplotlib.dates as mdates
+        import numpy as np
 
         # Prepare data
         df['date_only'] = df['date'].dt.date
         temporal_df = df.groupby('date_only')['sentiment_score'].mean().reset_index()
         
         plt.figure(figsize=(10, 6))
-        sns.lineplot(data=temporal_df, x='date_only', y='sentiment_score', marker='o', color='teal')
+        
+        # Scatter plot instead of line plot
+        plt.scatter(temporal_df['date_only'], temporal_df['sentiment_score'], color='teal', s=20, label='Daily Avg Sentiment')
+        
+        # Regression trend line
+        temporal_df['date_num'] = mdates.date2num(temporal_df['date_only'])
+        z = np.polyfit(temporal_df['date_num'], temporal_df['sentiment_score'], 1)
+        p = np.poly1d(z)
+        plt.plot(temporal_df['date_only'], p(temporal_df['date_num']), color='orange', linestyle='-', linewidth=2, label='Trend Line')
+        
         plt.axhline(0, color='red', linestyle='--', alpha=0.5)
         plt.title("Sentiment Trend: Discussion on Autonomous AI Risks")
         plt.xlabel("Date")
         plt.ylabel("Avg Sentiment Score")
         plt.xticks(rotation=45)
+        plt.legend()
         plt.tight_layout()
         
         plot_filename = f"sentiment_trend_{datetime.now().strftime('%H%M')}.png"
