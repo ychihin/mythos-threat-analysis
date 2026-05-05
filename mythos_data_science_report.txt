@@ -3,44 +3,44 @@ Date: May 5, 2026
 Prepared for: LING 575 Milestone 5 (Group 2)
 
 I. EXECUTIVE SUMMARY
-This report details a quantitative, NLP-driven investigation into the threat landscape of Anthropic’s highly agentic "Mythos" model, specifically focusing on the period from April 2021 (Anthropic's early announcements) to May 2026. By programmatically analyzing an empirical dataset of 369 expert-level discussions scraped from Hacker News and specialized subreddits, we have quantified the "Expert Outlook" on autonomous AI risks. The data confirms a sharp transition from historical optimism to high-volatility anxiety, culminating in a polarized reaction (49.6% positive vs. 28.7% negative) following the unauthorized model access events of April 2026. 
+This report details a quantitative, NLP-driven investigation into the threat landscape of Anthropic’s highly agentic "Mythos" model, strictly focusing on the critical period from April 2026 (the "Zero Hour" of model leaks) to May 5, 2026. By programmatically analyzing an empirical dataset of 271 expert-level discussions explicitly mentioning "Mythos" or "Project Glasswing" scraped from Hacker News and specialized subreddits, we have quantified the "Expert Outlook" on autonomous AI risks. The data confirms a highly polarized and anxious climate (44.3% positive vs. 27.7% negative) following the unauthorized model access events.
 
 II. METHODOLOGY
-To bypass subjective human reading, data was acquired via a custom Python-based scraper targeting cybersecurity discourse. We filtered the dataset to include only discussions from April 2021 to the present, yielding 369 relevant records. We employed a Zero-Shot NLP Classification pipeline utilizing the `facebook/bart-large-mnli` transformer model to autonomously categorize the text entries into predefined "Predicted Victims" and "Predicted Harms". Simultaneously, we calculated the compound sentiment of each post using the VADER intensity analyzer, mapping scores from -1.0 (extreme fear/negativity) to +1.0 (extreme hope/positivity).
+To bypass subjective human reading, data was acquired via a custom Python-based scraper targeting cybersecurity discourse. We strictly filtered the dataset to include only discussions from April 2026 to the present that explicitly mention Anthropic's model or initiatives, yielding 271 highly relevant records. We employed a Zero-Shot NLP Classification pipeline utilizing the `facebook/bart-large-mnli` transformer model to autonomously categorize the text entries into predefined "Predicted Victims" and "Predicted Harms". Simultaneously, we calculated the compound sentiment of each post using the VADER intensity analyzer, mapping scores from -1.0 (extreme fear/negativity) to +1.0 (extreme hope/positivity).
 
 III. VICTIMOLOGY: VOLUME VS. VULNERABILITY
-Our analysis of the 369 records reveals a critical distinction between the volume of discussion and the actual perceived vulnerability. "Individual Users" dominate the raw volume of discussion with 310 mentions (84.0% of the dataset), yet they hold a moderately positive average sentiment score of +0.20. This suggests the community views individual risks as manageable or mitigated by downstream software patches.
+Our analysis of the 271 records reveals a critical distinction between the volume of discussion and the actual perceived vulnerability. "Individual Users" dominate the raw volume of discussion with 229 mentions (84.5% of the dataset), yet they hold a low positive average sentiment score of +0.14. This suggests the community views individual risks as manageable or mitigated by downstream software patches.
 
-The critical outlier in the dataset is the "Financial Institutions" category. Despite comprising only 2.4% of the total volume (9 mentions), it is the *only* victim category to register a net-negative average sentiment score (-0.09). This indicates that when experts discuss banking and finance in the context of Mythos, the discourse is significantly more alarming—corroborating news reports of high-stakes meetings between Federal Reserve Chair Jerome Powell and major US banks. 
+The critical outlier in the dataset is the "Financial Institutions" category. Despite comprising only 2.6% of the total volume (7 mentions), it is the *only* victim category to register a heavily net-negative average sentiment score (-0.28). This indicates that when experts discuss banking and finance specifically in the context of the recent Mythos leaks, the discourse is alarming—corroborating news reports of high-stakes meetings between Federal Reserve Chair Jerome Powell and major US banks. 
 
-Systemic targets such as "Critical Infrastructure" (24 mentions) and "Government Systems" (14 mentions) show low positive sentiment scores of +0.11 and +0.12, respectively. Conversely, "Healthcare" (+0.87) and "SMEs" (+0.30) show strong positive sentiment. We attribute this to experts discussing how Mythos could be used as a defensive "immune system" to protect these under-resourced sectors.
+Systemic targets such as "Critical Infrastructure" (15 mentions) and "Government Systems" (12 mentions) show low positive sentiment scores of +0.24 and +0.13, respectively. Conversely, "Healthcare" (+0.92) and "SMEs" (+0.38) show strong positive sentiment. We attribute this to experts discussing how Mythos could be used as a defensive "immune system" to protect these under-resourced sectors.
 
 Table 1: Victim Risk Distribution
 -----------------------------------------------------------------------
 Victim Category          | Mentions | Avg Sentiment | Risk Status
 -------------------------|----------|---------------|-------------------
-Financial Institutions   | 9        | -0.09         | CRITICAL (Feared)
-Critical Infrastructure  | 24       | +0.11         | HIGH (Systemic)
-Government Systems       | 14       | +0.12         | HIGH (Strategic)
-Individual Users         | 310      | +0.20         | MODERATE (Volume)
-SMEs                     | 9        | +0.30         | LOW (Under-serviced)
-Healthcare               | 3        | +0.87         | POSITIVE (Defensive)
+Financial Institutions   | 7        | -0.28         | CRITICAL (Feared)
+Critical Infrastructure  | 15       | +0.24         | HIGH (Systemic)
+Government Systems       | 12       | +0.13         | HIGH (Strategic)
+Individual Users         | 229      | +0.14         | MODERATE (Volume)
+SMEs                     | 7        | +0.38         | LOW (Under-serviced)
+Healthcare               | 1        | +0.92         | POSITIVE (Defensive)
 -----------------------------------------------------------------------
 
 IV. VECTOR ANALYSIS: THE DOMINANCE OF SABOTAGE
-When examining the predicted vectors of attack, the expert community has clearly shifted focus away from traditional data theft. "Autonomous Sabotage" is overwhelmingly the dominant threat, accounting for 74.3% of all extracted harms (274 out of 369 mentions). 
+When examining the predicted vectors of attack tied directly to Mythos, the expert community is overwhelmingly focused on "Autonomous Sabotage", accounting for 75.6% of all extracted harms (205 out of 271 mentions). 
 
-Furthermore, we observed an "Escalation Gap" in sentiment correlating with the unpredictability of the harm. "Zero-Day Exploitation" (65 mentions, 17.6% of data) carries an average sentiment score of +0.17, which is more anxious and less positive than discussions around "Data Breaches" (+0.23, 26 mentions). The technical community is heavily concentrated on the model's ability to chain novel exploits to cause functional failure rather than standard data exfiltration. Also notable is that "Financial Fraud" registered a net-negative sentiment (-0.13), highlighting severe concerns in that specific sector.
+Furthermore, "Zero-Day Exploitation" (49 mentions, 18.1% of data) carries an average sentiment score of +0.16. While standard "Data Breaches" represent a smaller fraction (13 mentions, 4.8%), they carry a lower sentiment of +0.09. The technical community is heavily concentrated on the model's novel ability to chain exploits to cause functional failure rather than standard data exfiltration. Notably, "Financial Fraud" registered a net-negative sentiment (-0.13), highlighting severe concerns in that specific sector regarding the model's capabilities.
 
 Table 2: Predicted Harm Prevalence
 -----------------------------------------------------------------------
 Harm Category            | Count | % of Data | Sentiment (Expert Alarm)
 -------------------------|-------|-----------|--------------------------
-Autonomous Sabotage      | 274   | 74.3%     | 0.20
-Zero-Day Exploitation    | 65    | 17.6%     | 0.17 
-Data Breach              | 26    | 7.0%      | 0.23
-Financial Fraud          | 3     | 0.8%      | -0.13
-Ransomware               | 1     | 0.3%      | 0.45
+Autonomous Sabotage      | 205   | 75.6%     | +0.15
+Zero-Day Exploitation    | 49    | 18.1%     | +0.16 
+Data Breach              | 13    | 4.8%      | +0.09
+Financial Fraud          | 3     | 1.1%      | -0.13
+Ransomware               | 1     | 0.4%      | +0.45
 -----------------------------------------------------------------------
 
 V. UNDERSTANDING THE PREDICTED HARMS (LAY-LANGUAGE GUIDE)
@@ -52,7 +52,7 @@ To assist non-technical stakeholders in understanding the specific risks evaluat
 * Ransomware: When the AI acts as a digital kidnapper, locking up a computer's files using unbreakable encryption and demanding a monetary payment to release them.
 
 VI. TEMPORAL TRENDS AND THE VOLATILITY CRISIS
-Focusing our temporal mapping exclusively from April 2021 forward, we see the baseline shift from the high optimism of the "Safety Hype" (2021-2023) directly into a "Volatility Explosion" beginning in late 2025 and peaking in April 2026. During this period, sentiment scores fluctuated wildly. For example, sentiment crashed to negative extremes during the "Discord Sleuths" breach, but spiked to highly positive amid discussions of defensive mitigation. This 49.6% Positive vs. 28.7% Negative polarization reflects a "War of Realities" between those viewing Mythos as a defensive savior and those viewing it as an existential threat.
+By isolating the data to the immediate aftermath of the Mythos announcements and leaks (April 2026 to present), we capture the true "Volatility Explosion". During this specific, condensed window, sentiment scores fluctuated wildly. For example, sentiment crashed to negative extremes during the "Discord Sleuths" breach, but spiked to highly positive amid discussions of defensive mitigation. This 44.3% Positive vs. 27.7% Negative polarization reflects a "War of Realities" between those viewing Mythos as a defensive savior and those viewing it as an immediate, active threat.
 
 VII. CONCLUSION: THE ASYMMETRY OF SPEED
-The data confirms that the core danger identified by the expert community is the "Asymmetry of Speed"—specifically, the "Deployment Time Lag." Empirical simulations show Mythos can identify and exploit a vulnerability in less than 15 seconds. Meanwhile, human-centric organizational response times average 17 days to apply a patch. This structural inability for humans to react to machine-speed exploits is the true danger of Mythos.
+The data confirms that the core danger identified by the expert community regarding Mythos is the "Asymmetry of Speed"—specifically, the "Deployment Time Lag." Empirical simulations show Mythos can identify and exploit a vulnerability in less than 15 seconds. Meanwhile, human-centric organizational response times average 17 days to apply a patch. This structural inability for humans to react to machine-speed exploits is the true, present danger of the model.
