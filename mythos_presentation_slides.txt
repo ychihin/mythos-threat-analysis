@@ -1,44 +1,57 @@
 SLIDE-BY-SLIDE PRESENTATION DRAFT: IS MYTHOS DANGEROUS?
 LING 575 Milestone 5 | Group 2
 
+==================================================
 SLIDE 1: PROJECT OVERVIEW - NLP-DRIVEN RISK ASSESSMENT
-* Goal: Quantify the real-world danger of Anthropic’s "Mythos" model.
-* Beyond Sentiment: Shifting from "How people feel" to "What experts predict."
-* Focus: Identifying specific victims and technical harm vectors.
-* Dataset: 429 expert-level discussions from Hacker News & Cybersecurity forums.
+==================================================
+* Goal: Quantify the real-world danger of Anthropic’s "Mythos" model using empirical data.
+* Beyond Subjective Sentiment: Shifting from "How people feel" to "What experts predict."
+* Core Focus: Programmatically identifying specific victims and technical harm vectors.
+* Dataset: 429 expert-level discussions and post records scraped from Hacker News & Cybersecurity forums (2009 - May 2026).
 
+==================================================
 SLIDE 2: METHODOLOGY - THE "THREAT EXTRACTION" PIPELINE
-* Scraper: Targeted extraction of expert discourse (titles + full comment bodies).
-* AI Engine: Zero-Shot NLP Classification (BART-Large-MNLI).
-* Sentiment: VADER intensity mapping for outlook assessment.
-* Hardware: Pipeline optimized on Apple M1 Pro GPU (MPS) for high-speed inference.
+==================================================
+* Custom Scraper: Targeted extraction of expert discourse (titles + full comment bodies) via Algolia API.
+* AI Engine: Zero-Shot NLP Classification utilizing the `facebook/bart-large-mnli` transformer model.
+* Sentiment Analysis: VADER intensity mapping to score text from -1.0 (Extreme Fear) to +1.0 (Extreme Hope).
+* Hardware Optimization: Pipeline executed on Apple M1 Pro GPU (MPS) for high-speed local inference.
 
+==================================================
 SLIDE 3: RESULTS (1) - OVERVIEW: THE WAR OF REALITIES
-* Polarization: The dataset is split (50% Positive vs. 29% Negative).
-* The Defensive View: High optimism surrounding the Mozilla Firefox audit (271 vulnerabilities fixed).
-* The Offensive Reality: Sharp anxiety following the "Discord Sleuths" leak and $12M theft reports.
-* Conclusion: Mythos is a "Force Multiplier" for both sides.
+==================================================
+* Polarization Discovered: The 429-post dataset is sharply split—50.1% Positive vs. 28.7% Negative.
+* The Defensive View (Positive): High optimism surrounding the Mozilla Firefox audit (271 vulnerabilities autonomously fixed by Mythos).
+* The Offensive Reality (Negative): Sharp anxiety following the April 2026 "Discord Sleuths" leak and reports of $12M cybercriminal thefts.
+* Conclusion: The technical community views Mythos as a neutral but highly potent "Force Multiplier" for both sides.
 
-SLIDE 4: RESULTS (2) - VICTIMOLOGY: WHERE THE FEAR LIVES
-* Individual Users: Represent the highest volume (368 mentions) but moderate sentiment.
-* Financial Institutions: The #1 Critical Outlier. Only category with a Negative average sentiment score (-0.08).
-* Systemic Targets: Critical Infrastructure and Government systems show technical skepticism and high stakes.
-* Healthcare/SMEs: Viewed as potential beneficiaries of AI defense.
+==================================================
+SLIDE 4: RESULTS (2) - VICTIMOLOGY: VOLUME VS. VULNERABILITY
+==================================================
+* Individual Users: Represent the highest volume (368 mentions, 85.7% of data) but maintain a moderate positive sentiment (+0.19).
+* Financial Institutions: The #1 Critical Outlier. It is the ONLY category out of 6 to register a Negative average sentiment score (-0.086).
+* Systemic Targets: Critical Infrastructure (24 mentions, +0.11 score) and Government systems (15 mentions, +0.17 score) reflect heavy technical skepticism and high-stakes concern.
+* The Defensive Buffer: Healthcare (+0.87 score) and SMEs (+0.35 score) are highly positive, viewed as potential beneficiaries of automated AI defense.
 
+==================================================
 SLIDE 5: RESULTS (3) - HARM ANALYSIS: SABOTAGE OVER BREACHES
-* Major Shift: 75% of extracted harms identify "Autonomous Sabotage" as the primary threat.
-* The Escalation: "Zero-Day Exploitation" (Predicting invisible holes) is the #2 driver of technical anxiety.
-* Expert Verdict: The community is less worried about stolen data and more worried about AI breaking functional systems.
+==================================================
+* Major Shift in Threat Models: 75.5% of all extracted harms (324 of 429 mentions) identify "Autonomous Sabotage" as the primary threat.
+* The Escalation Gap: "Zero-Day Exploitation" (74 mentions) has a significantly lower sentiment score (+0.17) than traditional "Data Breaches" (+0.23).
+* Expert Verdict: The community is minimally concerned with stolen data (only 6.1% of mentions) and heavily alarmed by AI autonomously breaking functional systems.
 
+==================================================
 SLIDE 6: RESULTS (4) - TEMPORAL TRENDS: THE 2026 CRISIS
-* Baseline: Historic stability/optimism (2021-2024).
-* The Explosion: Volatility began in late 2025 as agentic capabilities leaked.
-* Zero Hour: April 2026 saw extreme sentiment crashes following model weight exposure.
-* Current Outlook: Highly volatile. High optimism for patches (Mozilla) is being countered by fear of criminal misuse.
+==================================================
+* Baseline: Historic stability and high safety optimism (averaging near +0.98 during 2021-2023).
+* The Explosion: Volatility began in late 2025 as the first agentic capabilities leaked online.
+* Zero Hour (April 2026): Saw extreme sentiment crashes (dropping to -0.025 on April 26) following model weight exposure to Discord groups.
+* Current Outlook: Highly volatile. High optimism for automated patches (+0.98 spikes) is constantly countered by the fear of decentralized criminal misuse.
 
+==================================================
 SLIDE 7: CONCLUSION - THE ASYMMETRY OF SPEED
+==================================================
 * Is Mythos Dangerous? YES.
-* The Smoking Gun: The "Deployment Time Lag."
-* Discovery: Mythos identifies exploits in <15 seconds.
-* Mitigation: Human patch cycles take 17+ days.
-* Final Stance: The "danger" is the elimination of the human reaction window, creating permanent digital instability.
+* The Smoking Gun: The "Deployment Time Lag" between AI capability and human organizational structure.
+* Discovery vs. Mitigation: Empirical simulations prove Mythos can identify and exploit a vulnerability in <15 seconds. Human patch cycles take an average of 17+ days.
+* Final Stance: The true "danger" is the structural elimination of the human reaction window, creating a permanent state of digital instability.
